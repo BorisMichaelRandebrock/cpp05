@@ -6,14 +6,14 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/05 14:56:11 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:49:45 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("default"), _grade(LOWEST) {
-	std::cout << "default constructor called with " << this->_grade << " level." << std::endl;
+Bureaucrat::Bureaucrat() : _name("Default"), _grade(LOWEST) {
+	std::cout << "A new office clerk has been employd at the lowest grade with default clerk constructor and with " << this->_grade << " grade." << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name), _grade(grade) {
@@ -21,7 +21,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name), _grade
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > LOWEST)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << this->_name << " bureaucrat has been constructed with level: " << this->_grade << "!" << std::endl;  
+	std::cout << "The Bureaucrat "<<BOLD << this->_name << RESET << " has been employed with level: " << this->_grade << "!" << std::endl;  
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &cpy) {
@@ -35,7 +35,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << this->_name << " has just lost his job as it has been deeconstructed, rationalized & outsourced. " << std::endl;
+	std::cout << this->_name << YELLOW << " has just lost his job as it has been deeconstructed, rationalized & outsourced. " << RESET << std::endl;
 }
 
 const std::string Bureaucrat::getName() const { return this->_name; }
@@ -53,14 +53,7 @@ void Bureaucrat::decrementGrade() {
 	if (this->getGrade() >= LOWEST)
 		throw Bureaucrat::GradeTooLowException();
 	else
-		this->_grade += 1;
-/*
-	try {
 		this->_grade++;
-	}
-	catch (std::exception &GradeTooHighException) {
-		throw Bureaucrat::GradeTooHighException();
-	}*/
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
