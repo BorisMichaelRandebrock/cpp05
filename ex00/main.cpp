@@ -17,7 +17,7 @@ int main(void)
 {
 	{
 		std::string user;
-		std::cout << GREEN << "Welcome to the Universe my friend, my Name is Zaphod Beeblebrox, President of the Universe" << std::endl <<
+		std::cout << GREEN << "Welcome to the Universe my friend, my Name is Zaphod Beeblebrox, President of the same.." << std::endl <<
 			"I understand you are looking for a job in my administration.. just tell me: What is your name? " << RESET; 
 		if (!std::getline(std::cin, user)) {
 			std::cout << std::endl << "Zaphood Beeblebrox: " << RED << "Dont screw with me...! You want the job, or not?" << std::endl;
@@ -30,8 +30,9 @@ int main(void)
 		std::cout << std::endl;
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		std::cout << "The new Bureaucrat " << a->getName() << " has been hired with grade: " << a->getGrade() << std::endl;;
-
+		std::cout << "The new Bureaucrat " << a->getName() << " has been hired with grade: " << a->getGrade() << std::endl;
+		std::cout << "Zaphood: " << YELLOW << "..hmmm grade 150 was maybe a bit shabby..." << RESET << std::endl; 
+		sleep(2);
 		try 
 		{
 			a->incrementGrade();
@@ -70,14 +71,14 @@ int main(void)
 		sleep(3);
 
 		delete a;
-		std::cout << "Zaphood: " << GREEN << "I am sorry about that " << user << ", now we talk about your position.. " << std::endl;
+		std::cout << "Zaphood: " << GREEN << "I am sorry about that " << user << ", now let´s talk about your position.. " << std::endl;
 		std::cout << std::endl;
 		std::cout << "What about if I make you head of the construction division?? " << RESET << std::endl;
 		sleep(2);
 		Bureaucrat *u = new Bureaucrat(user, 1);
 		std::cout << u->getName() << " is now employed with grade: " << u->getGrade() << std::endl;
 		sleep(2);
-		std::cout << "Zaphood: " << GREEN << "mmmm, maybe I can promote you one more level.. " << RESET << std::endl;
+		std::cout << "Zaphood: " << GREEN << "..hmmmm, maybe I can promote you one more level.. " << RESET << std::endl;
 		try {
 			u->incrementGrade();
 		}

@@ -35,7 +35,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << this->_name << YELLOW << " has just lost his job as it has been deeconstructed, rationalized & outsourced. " << RESET << std::endl;
+	std::cout << this->_name << YELLOW << " has just lost his job as it has been deconstructed, rationalized & outsourced. " << RESET << std::endl;
 }
 
 const std::string Bureaucrat::getName() const { return this->_name; }
