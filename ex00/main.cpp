@@ -6,11 +6,9 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/04 17:40:46 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:51:34 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Bureaucrat.hpp"
 
 #include "Bureaucrat.hpp"
 
@@ -22,43 +20,57 @@ int main(void)
 		std::cout << std::endl;
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		std::cout << a;
+		std::cout << a->getName() << " has been hired with grade: " << a->getGrade() << std::endl;;
 
 		try // in my opinion would make more sense if the try-catch blocks would have been inside the class itself already
 		{
-		a->incrementGrade();
+			a->incrementGrade();
 		}
-		catch(Bureaucrat::GradeTooHighException &e) // the try-catch blocks inside the class are commented out but fully functional
+		catch(std::exception &e) // the try-catch blocks inside the class are commented out but fully functional
 		{
-			std::cerr << "\033[33mIncrementing grade of " << a->getName() <<
-			" failed: " << e.what() << "\033[0m" << std::endl;
+			std::cout << "\033[33mIncrementing grade of " << a->getName() <<
+				" failed: " << e.what() << "\033[0m" << std::endl;
 		}
 
-		std::cout << a;
+		std::cout << "officer " << a->getName() << " has now grade: " << a->getGrade() << std::endl;
+
+		//a->decrementGrade();
+		//std::cout << "officer " << a->getName() << " has now grade: " << a->getGrade() << std::endl;
+		try {
+			a->decrementGrade();
+		} 
+		catch(std::exception &e)
+		{
+			std::cout << "\033[33mDecrementing grade of " << a->getName() <<
+				" failed: " << e.what() << "\033[0m" << std::endl;
+		}
+		
+			std::cout << "officer iiiiiiiiiii" << a->getName() << " has now grade: " << a->getGrade() << std::endl;
 
 		try
 		{
-		a->decrementGrade();
+			a->decrementGrade();
+		}
+		catch(std::exception &e)
+		{
+			std::cout << "\033[33mDecrementing grade of " << a->getName() <<
+				" failed: " << e.what() << "\033[0m" << std::endl;
+		}
+		std::cout << "officer iiiiiiiiiii" << a->getName() << " has now grade: " << a->getGrade() << std::endl;
+
+		//	std::cout << a;
+
+		try
+		{
+			a->decrementGrade();
 		}
 		catch(Bureaucrat::GradeTooLowException &e)
 		{
 			std::cerr << "\033[33mDecrementing grade of " << a->getName() <<
-			" failed: " << e.what() << "\033[0m" << std::endl;
+				" failed: " << e.what() << "\033[0m" << std::endl;
 		}
 
-		std::cout << a;
-
-		try
-		{
-		a->decrementGrade();
-		}
-		catch(Bureaucrat::GradeTooLowException &e)
-		{
-			std::cerr << "\033[33mDecrementing grade of " << a->getName() <<
-			" failed: " << e.what() << "\033[0m" << std::endl;
-		}
-
-		std::cout << a;
+		std::cout << "officer iiiiiiiiiii" << a->getName() << " has now grade: " << a->getGrade() << std::endl;
 		std::cout << std::endl;
 
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
@@ -69,43 +81,43 @@ int main(void)
 	{
 		std::cout << std::endl;
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		Bureaucrat *a = new Bureaucrat(1);
+		Bureaucrat *a = new Bureaucrat("a", 50);
 		std::cout << std::endl;
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		std::cout << a;
 
 		try
 		{
-		a->decrementGrade();
+			a->decrementGrade();
 		}
 		catch(Bureaucrat::GradeTooLowException &e)
 		{
 			std::cerr << "\033[33mDecrementing grade of " << a->getName() <<
-			" failed: " << e.what() << "\033[0m" << std::endl;
+				" failed: " << e.what() << "\033[0m" << std::endl;
 		}
 
 		std::cout << a;
 
 		try
 		{
-		a->incrementGrade();
+			a->incrementGrade();
 		}
 		catch(Bureaucrat::GradeTooHighException &e)
 		{
 			std::cerr << "\033[33mIncrementing grade of " << a->getName() <<
-			" failed: " << e.what() << "\033[0m" << std::endl;
+				" failed: " << e.what() << "\033[0m" << std::endl;
 		}
 
 		std::cout << a;
 
 		try
 		{
-		a->incrementGrade();
+			a->incrementGrade();
 		}
 		catch(Bureaucrat::GradeTooHighException &e)
 		{
 			std::cerr << "\033[33mIncrementing grade of " << a->getName() <<
-			" failed: " << e.what() << "\033[0m" << std::endl;
+				" failed: " << e.what() << "\033[0m" << std::endl;
 		}
 
 		std::cout << a;
@@ -123,12 +135,12 @@ int main(void)
 
 		try
 		{
-			a = new Bureaucrat(0);
+			a = new Bureaucrat("M", 0);
 		}
 		catch(Bureaucrat::GradeTooHighException &e)
 		{
 			std::cerr << "\033[33mConstructing default failed: " <<
-			e.what() << "\033[0m" << std::endl;
+				e.what() << "\033[0m" << std::endl;
 		}
 
 		if (a != NULL)
@@ -149,12 +161,12 @@ int main(void)
 
 		try
 		{
-			a = new Bureaucrat(160);
+			a = new Bureaucrat("B", 160);
 		}
 		catch(Bureaucrat::GradeTooLowException &e)
 		{
 			std::cerr << "\033[33mConstructing default failed: " <<
-			e.what() << "\033[0m" << std::endl;
+				e.what() << "\033[0m" << std::endl;
 		}
 
 		if (a != NULL)

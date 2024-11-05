@@ -6,14 +6,14 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 13:03:51 by brandebr          #+#    #+#              #
-#    Updated: 2024/11/04 13:06:40 by brandebr         ###   ########.fr        #
+#    Updated: 2024/11/05 12:02:18 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME =  bureaucrat
 
-SRC = main.cpp .Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp
 
 OBJ_DIR = obj/
 

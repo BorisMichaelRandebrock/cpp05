@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/04 17:44:33 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:52:30 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 #include <iostream>
 #include <string>
 
-#define LOWEST = 150
-#define HIGHEST = 1
+#define LOWEST 150
+#define HIGHEST 1
 
 class Bureaucrat {
 	private:
@@ -25,7 +25,7 @@ class Bureaucrat {
 
 	public:
 		Bureaucrat();
-		Bureaucrat(const std::string name, int grade);
+		Bureaucrat(const std::string &name, int grade);
 		Bureaucrat(const Bureaucrat &);
 		Bureaucrat &operator=(const Bureaucrat &);
 		~Bureaucrat();
@@ -42,11 +42,14 @@ class Bureaucrat {
 				const char *what() const throw();
 		};
 
+		/*		class GradeTooLowException : public std::exception {
+				public:
+				const char *what() const throw();
+						};*/
 		class GradeTooLowException : public std::exception {
 			public:
-				const char *what() const throw();
+				const char* what() const throw(); // Forward declaration only
 		};
-		std::ostream	&operator<<(std::ostream &o, Bureaucrat *a);
-	//	std::ostream &operator<<(std::ostream & o, Bureaucrat const & cpy);
-//		std::ostream &operator<<(std::ostream &o, const Bureaucrat *obj);
 };
+
+std::ostream &operator<<(std::ostream & o, const Bureaucrat &cpy);
