@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/05 18:49:45 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:03:53 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Bureaucrat::Bureaucrat() : _name("Default"), _grade(LOWEST) {
 	std::cout << "A new office clerk has been employd at the lowest grade with default clerk constructor and with " << this->_grade << " grade." << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name), _grade(grade) {
+Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade) {
 	if (grade < HIGHEST)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > LOWEST)
@@ -35,7 +35,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << this->_name << YELLOW << " has just lost his job as it has been deconstructed, rationalized & outsourced. " << RESET << std::endl;
+	std::cout << this->_name << YELLOW << " has just lost its job as it has been deconstructed, rationalized & outsourced. " << RESET << std::endl;
 }
 
 const std::string Bureaucrat::getName() const { return this->_name; }

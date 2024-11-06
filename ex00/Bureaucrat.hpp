@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/05 16:45:30 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/06 10:56:56 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat {
 
 	public:
 		Bureaucrat();
-		Bureaucrat(const std::string &name, int grade);
+		Bureaucrat(const std::string name, int grade);
 		Bureaucrat(const Bureaucrat &);
 		Bureaucrat &operator=(const Bureaucrat &);
 		~Bureaucrat();
@@ -52,13 +52,9 @@ class Bureaucrat {
 				const char *what() const throw();
 		};
 
-		/*		class GradeTooLowException : public std::exception {
-				public:
-				const char *what() const throw();
-						};*/
 		class GradeTooLowException : public std::exception {
 			public:
-				const char* what() const throw(); // Forward declaration only
+				const char* what() const throw();
 		};
 };
 

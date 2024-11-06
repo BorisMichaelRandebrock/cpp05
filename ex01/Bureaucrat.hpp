@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/06 17:46:47 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:39:04 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 #define YELLOW  "\033[1;33m"
 #define BLUE    "\033[34m"
 
+class Form;
 
 class Bureaucrat {
 	private:
@@ -48,7 +49,7 @@ class Bureaucrat {
 		void incrementGrade();
 		void decrementGrade();
 
-		void signForm(const Form &);
+		void signForm(Form &);
 
 		class GradeTooHighException : public std::exception {
 			public:
