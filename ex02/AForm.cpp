@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 14:53:07 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:29:30 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ AForm::~AForm() {
 
 const std::string AForm::getName() const { return this->_name; }
 
-bool AForm::getIsSigned() { return this->_isSigned; }
+bool AForm::getIsSigned() const { return this->_isSigned; }
 int AForm::getGradeSign() const { return this->_gradeSign; }
 int AForm::getGradeExecute() const { return this->_gradeExecute; }
 
@@ -62,18 +62,18 @@ void AForm::beSigned(Bureaucrat const &name) {
 
 void AForm::execute(Bureaucrat const &executor) const {
 	if (executor.getGrade() > this->getGradeExecute()) {
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 	}
 	if (!this->getIsSigned()) {
-		throw Form::FormNotSigned();
+		throw AForm::FormNotSignedException();
 	}
 //	this->executeForm();
-	executor.executeForm(AForm const & form);
+	//executor.executeForm(AForm const & form);
+	executor.executeForm(*this);
 }
 
-const char *AForm::FormNotSigned::what() const throw() {
+const char *AForm::FormNotSignedException::what() const throw() {
 		 return "\033[1;33mThis form could not be executed as it has not been signed.\033[0m \n";
-
 }
 
 const char *AForm::GradeTooHighException::what() const throw() {

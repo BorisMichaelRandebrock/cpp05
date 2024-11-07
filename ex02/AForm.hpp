@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 14:20:25 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:46:54 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,11 @@
 
 #include <iostream>
 #include <string>
+#include "Bureaucrat.hpp"
+#include "colors.hpp"
 
 #define LOWEST 150
 #define HIGHEST 1
-
-#define RESET   "\033[0m"
-#define BOLD     "\033[1m"
-#define RED_BACKGROUND "\033[41m"
-#define RED     "\033[31m"
-#define BOLD_RED "\033[31m"
-#define GREEN   "\033[32m"
-#define YELLOW  "\033[1;33m"
-#define BLUE    "\033[34m"
-
-#include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -46,7 +37,7 @@ class AForm {
 		virtual ~AForm();
 
 		const std::string	getName() const;
-		bool 				getIsSigned();
+		bool 				getIsSigned() const;
 		int 			getGradeSign() const;
 		int			getGradeExecute() const;
 
@@ -59,8 +50,14 @@ class AForm {
 			public:
 				const char* what() const throw();
 		};
+
+		class FormNotSignedException : public std::exception {
+			public:
+				const char *what() const throw();
+		};
+
 		void beSigned(Bureaucrat const &);
-		virtual void execute(Bureaucrat const & executor) const;
+		virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream &operator<<(std::ostream & o, const AForm &cpy);

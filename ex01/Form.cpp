@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 13:46:40 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:33:39 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ const char *Form::GradeTooHighException::what() const throw() {
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	return "\033[1;33mGrade to low.\n \033[31mPlease call your supervisor to find a Bureacrat with appropiate signature powers! \033[0m \n";
+	return "\033[1;33mGrade to low.\n \033[31mPlease call your supervisor to find a Bureaucrat with appropiate signature powers! \033[0m \n";
 }
 
 std::ostream &operator<<(std::ostream &o, Form &cpy) {

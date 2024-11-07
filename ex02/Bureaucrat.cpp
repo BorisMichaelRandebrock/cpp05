@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/06 18:39:15 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:28:55 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,12 @@ void Bureaucrat::decrementGrade() {
 		this->_grade++;
 }
 
-void Bureaucrat::signForm(Form &name) {
+void Bureaucrat::signForm(AForm &name) {
 	name.beSigned(*this);
+}
+
+void Bureaucrat::executeForm(AForm const & form) const {
+	(void)form;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {

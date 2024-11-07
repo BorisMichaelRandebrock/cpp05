@@ -6,12 +6,13 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 13:48:36 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:44:26 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include <unistd.h>
 
 int main(void)
@@ -28,24 +29,72 @@ int main(void)
 		}
 		Bureaucrat *u = new Bureaucrat(user, 1);
 		
+		(void)s;
+		(void)m;
+		(void)u;
 		std::cout << "Zaphood: " << GREEN << "For starters. lets create a simple, basic form." << RESET << std::endl; 
 		sleep(2);
-		Form *basic = new Form();
+		PresidentialPardonForm *lucky = new PresidentialPardonForm();
 		
+		(void)lucky;
 		std::cout << "Zaphood: " << GREEN << s->getName() << " Could you go ahead and sign the form?" << RESET << std::endl; 
 		sleep(2);
+		
 		try {
-			basic->beSigned(*s);
+			lucky->beSigned(*s);
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 		sleep(2);
-		std::cout << "Zaphood: " << GREEN << "Let's see whether I can introduce you to your first task, lets create a Form together..." << RESET << std::endl; 
+
+		try {
+		//	s->executeForm(*lucky);
+			lucky->execute(*s);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+		
+		try {
+			lucky->beSigned(*m);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+		sleep(2);
+
+		try {
+			lucky->beSigned(*u);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+		sleep(2);
+		
+		try {
+			std::cout << "What?" << std::endl;
+		//	s->executeForm(*lucky);
+			lucky->execute(*s);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+		sleep(2);
+		try {
+		//	u->executeForm(*lucky);
+			lucky->execute(*u);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+		sleep(2);
+		/*
+		std::cout << "Zaphood: " << GREEN << "Let's see whether I can introduce you to your first task, lets create a AForm together..." << RESET << std::endl; 
 		sleep(2);
 		sleep(2);
 		std::cout << "Zaphood: " << GREEN << u->getName() << ", I have here a request for the destrucion of that shabby little house in Country Lane, with that, I will show you how we handle this kinda things." << RESET << std::endl;
-		Form *destroyArthurDentsHome = new Form("Destroy 155 Country Lane, Cottington, Cottingshire", 50, 50);
+		AForm *destroyArthurDentsHome = new AForm("Destroy 155 Country Lane, Cottington, Cottingshire", 50, 50);
 		sleep(2);
 
 		std::cout << "Zaphood: " << YELLOW << s->getName() << ", just show the new head of Construction how we sign forms here!" << RESET << std::endl;
@@ -63,7 +112,7 @@ int main(void)
 		std::cout << "Zaphood: " << BLUE << "Well, my bad..., my apologies " << s->getName() << ", I should have known, I will ask a higher ranking officer. " << std::endl << YELLOW << m->getName() << " could you do the job? "<< RESET << std::endl;
 		sleep(2);
 		try {
-			m->signForm(*destroyArthurDentsHome);
+			m->signAForm(*destroyArthurDentsHome);
 		} 
 		catch(std::exception &e)
 		{
@@ -73,7 +122,7 @@ int main(void)
 		std::cout << "Zaphood: " << GREEN << " Just for showing you what happens if a form is already signed, " << u->getName() << ", please try to sign the form which has been just signed by " << m->getName() << "." << std::endl; 
 		sleep(2);
 		try { 
-			u->signForm(*destroyArthurDentsHome);
+			u->signAForm(*destroyArthurDentsHome);
 		}
 		catch (std::exception &e) 
 		{
@@ -95,5 +144,6 @@ int main(void)
 		delete u;
 		delete s;
 		delete m;
+		*/
 	return 0;
 }

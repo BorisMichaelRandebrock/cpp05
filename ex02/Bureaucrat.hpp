@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 14:04:58 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:29:05 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,14 @@
 
 #include <iostream>
 #include <string>
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "colors.hpp"
 
 #define LOWEST 150
 #define HIGHEST 1
 
-#define RESET   "\033[0m"
-#define BOLD     "\033[1m"
-#define RED_BACKGROUND "\033[41m"
-#define RED     "\033[31m"
-#define BOLD_RED "\033[31m"
-#define GREEN   "\033[32m"
-#define YELLOW  "\033[1;33m"
-#define BLUE    "\033[34m"
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 	private:
@@ -48,7 +41,8 @@ class Bureaucrat {
 		void incrementGrade();
 		void decrementGrade();
 
-		void signForm(Form &);
+		void signForm(AForm &);
+		void executeForm(AForm const & form) const;
 
 		class GradeTooHighException : public std::exception {
 			public:

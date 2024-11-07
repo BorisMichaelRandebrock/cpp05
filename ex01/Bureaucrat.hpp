@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/06 18:39:04 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:04:58 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ class Bureaucrat {
 
 		const std::string	getName() const;
 		int	getGrade() const;
-
 
 		void incrementGrade();
 		void decrementGrade();

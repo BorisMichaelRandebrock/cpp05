@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 13:48:36 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:31:23 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ int main(void)
 {
 	
 		std::string user;
+		std::cout << BLUE << "WELCOME TO THE MARVELOUS WORLD OF FORMS!" << std::endl << std::endl;
 		Bureaucrat *s = new Bureaucrat();
 		Bureaucrat *m = new Bureaucrat("Princess Peach", 50);
-		std::cout << "Zaphod Beeblebrox: " << GREEN << "Hello again my friend,... my memory is short and I have a lot of things on my mind.., " << std::endl <<
+		sleep(5);
+		std::cout << RESET << "Zaphood Beeblebrox: " << GREEN << "Hello again my friend,... my memory is short and I have a lot of things on my mind.., " << std::endl <<
 			"my apologies.., could you remind me your name again? " << RESET; 
 		if (!std::getline(std::cin, user)) {
 			std::cout << std::endl << "Zaphood Beeblebrox: " << RED << "Dont screw with me...! You want to loose your job?" << std::endl;
@@ -89,7 +91,8 @@ int main(void)
 		std::cout << "The process will take slightly less than two of your Earth minutes. Thank you." << RESET << std::endl;
 		sleep(5);
 		std::cout << "🐬: So Long, and Thanks for All the Fish" << std::endl;
-	
+		sleep(5);
+
 		delete basic;
 		delete destroyArthurDentsHome;
 		delete u;
