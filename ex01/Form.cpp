@@ -6,14 +6,14 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 11:50:59 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:46:40 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : _name("Default"), _isSigned(false), _gradeSign(LOWEST), _gradeExecute(LOWEST) {
-	std::cout << "Default constuctor has created a new form with minimum reqquiremenst for signature & execution." << std::endl;
+Form::Form() : _name("Basic Form"), _isSigned(false), _gradeSign(LOWEST), _gradeExecute(LOWEST) {
+	std::cout << "Default constuctor has created a new form with minimum requiremenst for signature & execution." << std::endl;
 }
 
 Form::Form(const std::string name, const int gradeSign, const int gradeExecute) : _name(name), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
@@ -38,7 +38,7 @@ Form &Form::operator=(const Form &cpy) {
 }
 
 Form::~Form() {
-	std::cout << this->_name << YELLOW << " has just lost his job as it has been deconstructed, rationalized & outsourced. " << RESET << std::endl;
+	std::cout << this->_name << YELLOW << " has been shredded and burned!" << RESET << std::endl;
 }
 
 const std::string Form::getName() const { return this->_name; }
