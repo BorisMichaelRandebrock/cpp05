@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/06 17:46:23 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:50:59 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ void Form::beSigned(Bureaucrat const &name) {
 	if (this->_isSigned == true)
 		std::cout << YELLOW << "You are too slow..., this form has already been signed." << RESET << std::endl;
 	else if (this->_gradeSign < name.getGrade()) {
-		std::cout << RED << "You sly bastard.. get your supperior... " << RESET << std::endl;
+		std::cout << RED << name.getName() << " couldn’t sign " << this->getName() << " because : " << RESET;
 		throw GradeTooLowException();
 	}
 	else {
 		this->_isSigned = true;
-		std::cout << "The Bureaucrat " << name.getName() << " has signed " << this->_name << " Formular." <<std::endl; 
+		std::cout << "The Bureaucrat " << name.getName() << " signed " << this->_name << " Formular." <<std::endl; 
 	}
 }
 
@@ -65,7 +65,7 @@ const char *Form::GradeTooHighException::what() const throw() {
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	return "\033[1;33mThere is no lower level in ranking than level 150.\n \033[31mPlease enter a valid rank between 1 and 150! \033[0m \n";
+	return "\033[1;33mGrade to low.\n \033[31mPlease call your supervisor to find a Bureacrat with appropiate signature powers! \033[0m \n";
 }
 
 std::ostream &operator<<(std::ostream &o, Form &cpy) {

@@ -6,12 +6,12 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 13:03:51 by brandebr          #+#    #+#              #
-#    Updated: 2024/11/06 13:43:30 by brandebr         ###   ########.fr        #
+#    Updated: 2024/11/07 12:02:18 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME =  bureaucrat
+NAME = Form_up_maggots 
 
 SRC = main.cpp Bureaucrat.cpp Form.cpp
 
