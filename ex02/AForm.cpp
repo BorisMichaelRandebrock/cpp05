@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 17:29:30 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:57:23 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ AForm::AForm(const std::string name, const int gradeSign, const int gradeExecute
 		throw AForm::GradeTooHighException();
 	else if (gradeExecute < HIGHEST || gradeExecute > LOWEST)
 		throw AForm::GradeTooLowException();
-	std::cout << "The AForm "<< BOLD << this->_name << RESET << " has been created with required signature level of: " << this->_gradeSign << " and required execution level of: " << this->_gradeExecute << std::endl;  
+	std::cout << "The Form "<< BOLD << this->_name << RESET << " has been created with required signature level of: " << this->_gradeSign << " and required execution level of: " << this->_gradeExecute << std::endl;  
 }
 
 AForm::AForm(const AForm &cpy) {
@@ -56,7 +56,7 @@ void AForm::beSigned(Bureaucrat const &name) {
 	}
 	else {
 		this->_isSigned = true;
-		std::cout << "The Bureaucrat " << name.getName() << " signed " << this->_name << " AFormular." <<std::endl; 
+		std::cout << "The Bureaucrat " << name.getName() << " signed " << this->_name << " Form." <<std::endl; 
 	}
 }
 

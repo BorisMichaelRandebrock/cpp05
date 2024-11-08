@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 17:46:54 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:33:13 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ class AForm {
 
 		const std::string	getName() const;
 		bool 				getIsSigned() const;
-		int 			getGradeSign() const;
-		int			getGradeExecute() const;
+		int 				getGradeSign() const;
+		int					getGradeExecute() const;
 
 		class GradeTooHighException : public std::exception {
 			public:

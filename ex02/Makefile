@@ -6,18 +6,18 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 13:03:51 by brandebr          #+#    #+#              #
-#    Updated: 2024/11/07 16:59:30 by brandebr         ###   ########.fr        #
+#    Updated: 2024/11/08 15:03:28 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = No,_you_need_form_28B,_not_28C 
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp 
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp 
 
 OBJ_DIR = obj/
 
-HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp
+HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp
 
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 

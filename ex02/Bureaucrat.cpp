@@ -6,13 +6,13 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 17:28:55 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:47:01 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Default"), _grade(LOWEST) {
+Bureaucrat::Bureaucrat() : _name("Mr. Smith"), _grade(LOWEST) {
 	std::cout << "A new office clerk has been employd at the lowest grade with default clerk constructor and with " << this->_grade << " grade." << std::endl;
 }
 
@@ -61,7 +61,7 @@ void Bureaucrat::signForm(AForm &name) {
 }
 
 void Bureaucrat::executeForm(AForm const & form) const {
-	(void)form;
+	form.execute(*this);
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
@@ -69,7 +69,7 @@ const char *Bureaucrat::GradeTooHighException::what() const throw() {
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-	return "This Bureaucrat can not be demoted any further..";
+	return "This Bureaucrats grade is too low for the action required..";
 }
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat &cpy) {

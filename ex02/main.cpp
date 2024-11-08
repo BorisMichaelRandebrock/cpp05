@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 18:44:26 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:16:54 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include <unistd.h>
+#include "ShrubberyCreationForm.hpp"
+
 
 int main(void)
 {
@@ -21,7 +23,7 @@ int main(void)
 		std::string user;
 		Bureaucrat *s = new Bureaucrat();
 		Bureaucrat *m = new Bureaucrat("Princess Peach", 50);
-		std::cout << "Zaphod Beeblebrox: " << GREEN << "Hello again my friend,... my memory is short and I have a lot of things on my mind.., " << std::endl <<
+		std::cout << "Zaphood Beeblebrox: " << GREEN << "Hello again my friend,... my memory is short and I have a lot of things on my mind.., " << std::endl <<
 			"my apologies.., could you remind me your name again? " << RESET; 
 		if (!std::getline(std::cin, user)) {
 			std::cout << std::endl << "Zaphood Beeblebrox: " << RED << "Dont screw with me...! You want to loose your job?" << std::endl;
@@ -29,14 +31,10 @@ int main(void)
 		}
 		Bureaucrat *u = new Bureaucrat(user, 1);
 		
-		(void)s;
-		(void)m;
-		(void)u;
-		std::cout << "Zaphood: " << GREEN << "For starters. lets create a simple, basic form." << RESET << std::endl; 
+		std::cout << "Zaphood: " << GREEN << "Uhhh, I am impatient to try my new  executive powers... lets see... I could give a Presidential Pardon to some random mischief." << RESET << std::endl; 
 		sleep(2);
 		PresidentialPardonForm *lucky = new PresidentialPardonForm();
 		
-		(void)lucky;
 		std::cout << "Zaphood: " << GREEN << s->getName() << " Could you go ahead and sign the form?" << RESET << std::endl; 
 		sleep(2);
 		
@@ -46,16 +44,10 @@ int main(void)
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
+
+		std::cout << "Zaphood: " << GREEN << "Well, I should have figured that the Pardon needed some higher grade. " << m->getName() << " Could you go ahead and sign the form?" << RESET << std::endl; 
 		sleep(2);
 
-		try {
-		//	s->executeForm(*lucky);
-			lucky->execute(*s);
-		}
-		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
-		}
-		
 		try {
 			lucky->beSigned(*m);
 		}
@@ -64,6 +56,7 @@ int main(void)
 		}
 		sleep(2);
 
+		std::cout << "Zaphood: " << YELLOW << "hmm... I am starting to be nervous.. lets see " << u->getName() << " if you, as the head of the department, can sign the deed, otherwise I might have to call for a Cabinet Emergency Meeting." << RESET << std::endl; 
 		try {
 			lucky->beSigned(*u);
 		}
@@ -71,24 +64,67 @@ int main(void)
 			std::cout << e.what() << std::endl;
 		}
 		sleep(2);
-		
+		std::cout << "Zaphood: " << GREEN << " Uff,.. I already got scared.." << std::endl << m->getName() << " could you try to execute the pardon?" << RESET << std::endl; 
+		 /*
 		try {
-			std::cout << "What?" << std::endl;
 		//	s->executeForm(*lucky);
 			lucky->execute(*s);
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
-		sleep(2);
+		*/
 		try {
-		//	u->executeForm(*lucky);
-			lucky->execute(*u);
+		//	s->executeForm(*lucky);
+			lucky->execute(*s);
+		}
+			catch (std::exception &e) {
+			std::cout << m->getName() << RED << " can not execute this Pardon as her grade is too low!" << RESET << std::endl;
+			std::cout << e.what() << std::endl;
+		}
+		sleep(2);
+
+		std::cout << "Zaphood: " << GREEN << " I thought that much. " << u->getName() <<" could you give it a go?" << RESET << std::endl; 
+		 try {
+			u->executeForm(*lucky);
+		//	lucky->execute(*u);
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 		sleep(2);
+
+		ShrubberyCreationForm *forrest = new ShrubberyCreationForm("arthur");
+		try {
+			m->signForm(*forrest);
+		}
+		catch (std::exception &e){
+			std::cout << e.what() << std::endl;
+		}
+
+		try {
+			std::cout << u->getName() << " has signed the execution of the ShrubberyCreationForm" << std::endl;
+			//u->executeForm(*arthur);
+			forrest->execute(*u);
+		}
+		catch (std::exception &e) {
+			std::cout << "ShrubberyCreationForm could not be executed!" << std::endl;
+			std::cout << e.what() << std::endl;
+		}
+		PresidentialPardonForm *arthur = new PresidentialPardonForm("Arthur Dent");
+  
+		try {
+			u->signForm(*arthur);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+		try {
+			u->executeForm(*arthur);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
 		/*
 		std::cout << "Zaphood: " << GREEN << "Let's see whether I can introduce you to your first task, lets create a AForm together..." << RESET << std::endl; 
 		sleep(2);

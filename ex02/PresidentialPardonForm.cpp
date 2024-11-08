@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:09:53 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 18:45:20 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:18:52 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string target) : AForm("PresidentialPardonForm", 25, 5), _target(target) {
-	std::cout << " Pardonform created for: " << target << " crated B.O.: Zaphood Beeblebrox." << std::endl;
-//	std::cout << " Pardonform created for: " << this->getTargetName() << " crated B.O.: Zaphood Beeblebrox." std::endl;
+	std::cout << " Pardonform created for: " << target << " created B.O.: Zaphood Beeblebrox." << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
@@ -45,6 +44,6 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const {
 	else if (!this->getIsSigned()) {
 		throw AForm::FormNotSignedException();
 	}
-	std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << this->_target << " has been pardoned by Zaphood Beeblebrox." << std::endl;
 }
 
