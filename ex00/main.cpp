@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/05 19:05:21 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:57:32 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 {
 	{
 		std::string user;
-		std::cout << GREEN << "Welcome to the Universe my friend, my Name is Zaphod Beeblebrox, President of the same.." << std::endl <<
+		std::cout << GREEN << "Welcome to the Universe my friend, my Name is Zaphood Beeblebrox, President of the same.." << std::endl <<
 			"I understand you are looking for a job in my administration.. just tell me: What is your name? " << RESET; 
 		if (!std::getline(std::cin, user)) {
 			std::cout << std::endl << "Zaphood Beeblebrox: " << RED << "Dont screw with me...! You want the job, or not?" << std::endl;
@@ -29,7 +29,6 @@ int main(void)
 		Bureaucrat *a = new Bureaucrat();
 		std::cout << std::endl;
 
-		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		std::cout << "The new Bureaucrat " << a->getName() << " has been hired with grade: " << a->getGrade() << std::endl;
 		std::cout << "Zaphood: " << YELLOW << "..hmmm grade 150 was maybe a bit shabby..." << RESET << std::endl; 
 		sleep(2);
