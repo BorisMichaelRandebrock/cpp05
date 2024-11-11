@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 17:04:41 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:24:30 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int main(void)
 				delete relocationForm;
 			}
 		} else {
-			std::cout << RED_BACKGROUND << "since the Earth relocation Form got lost in paperwork, Earth's doom is set; destruction is imminent. and our Bureaucrats are going back to business as usual!" << RESET << std::endl << std::endl;
+			std::cout << RED_BACKGROUND << "since the Earth relocation Form got lost in the pile of paperwork, Earth's doom is set; destruction is imminent, and our Bureaucrats are continuing utterly ignorant of the importance of the lost document..." << RESET << std::endl << std::endl;
 		}
 
 		std::cout << std::endl <<"The usual forms processing continues..." << std::endl;
