@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:09:53 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 18:32:48 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:19:41 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string target) : AForm("RobotomyRequestForm", 72, 45), _target(target) {
-	std::cout <<  target << " created!" << std::endl;
+	std::cout <<  target << "_robotomy form created!" << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
-	std::cout << this->getName() << " RobotomyRequestForm has been shredded & burned" << std::endl;
+//	std::cout << this->getName() << " RobotomyRequestForm has been shredded & burned" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &cpy) {
@@ -51,7 +51,7 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
 	{
 		std::cout << GREEN << "Executing RobotomyRequestForm for " << this->_target << RESET << std::endl;
 		sleep(1);
-		std::cout << GREEN << "BRRRRRRRRRRRRRRRRRRRRRR" << RESET << " – the drill roars to life, echoing through the room." << std::endl;
+		std::cout << GREEN << "BRRRRRRRRRRRRRRRRRRRRRR" << RESET << " – the drill roars to life, echoing through the air, audible from afar." << std::endl;
 		sleep(1);
 		std::cout << GREEN <<"RRRRR-RRR-RRR-RRRR-KRRRRRR-KRRRRRRRRRRRRRRR" << RESET << " – it clatters and screeches as it bites into the surface, making everything vibrate." << std::endl;
 		sleep(1);
@@ -73,5 +73,6 @@ std::cout << YELLOW << "FRRRZZZZT-KZZZT-SPRRRZZZZ!!" RESET << " – the machine 
 		sleep(1);
 		std::cout << RED << "The robotomy of " <<  this->_target << " has failed!" << RESET << std::endl;
 	}
+	std::cout << GREEN << this->_target << "_roobotomy request form has been executed by Bureaucrat: " << executor.getName() << "!" << RESET << std::endl;
 }
 

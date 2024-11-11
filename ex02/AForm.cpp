@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 13:57:23 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:11:42 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void AForm::beSigned(Bureaucrat const &name) {
 	}
 	else {
 		this->_isSigned = true;
-		std::cout << "The Bureaucrat " << name.getName() << " signed " << this->_name << " Form." <<std::endl; 
+		std::cout << "The Bureaucrat " << name.getName() << " signed the " << this->_name << " Form." <<std::endl; 
 	}
 }
 
@@ -67,8 +67,6 @@ void AForm::execute(Bureaucrat const &executor) const {
 	if (!this->getIsSigned()) {
 		throw AForm::FormNotSignedException();
 	}
-//	this->executeForm();
-	//executor.executeForm(AForm const & form);
 	executor.executeForm(*this);
 }
 
@@ -81,7 +79,7 @@ const char *AForm::GradeTooHighException::what() const throw() {
 }
 
 const char *AForm::GradeTooLowException::what() const throw() {
-	return "\033[1;33mGrade to low.\n \033[31mPlease call your supervisor to find a Bureacrat with appropiate signature powers! \033[0m \n";
+	return "\033[1;33mGrade to low.\n \033[31mPlease call your supervisor to find a Bureaucrat with the appropiate ranking! \033[0m \n";
 }
 
 std::ostream &operator<<(std::ostream &o, AForm &cpy) {

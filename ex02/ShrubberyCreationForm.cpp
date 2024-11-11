@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:09:53 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 17:25:04 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:20:13 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string target) : AForm("ShrubberyCreationForm", 145, 37), _target(target) {
-	std::cout <<  target << " created!" << std::endl;
+	std::cout << GREEN <<  target << "_shrubbery form created!" << RESET << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {
-	std::cout << this->getName() << " ShrubberyCreationForm has been shredded & burned" << std::endl;
+//	std::cout << this->getName() << " ShrubberyCreationForm has been shredded & burned" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &cpy) {
@@ -45,7 +45,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 		throw AForm::FormNotSignedException();
 	}
 	
-		 std::cout << GREEN << "Executing ShrubberyCreationForm for " << this->_target << RESET << std::endl;
+		 std::cout << YELLOW << "Executing ShrubberyCreationForm for " << this->_target << "_shrubbery." << RESET << std::endl;
 
 		 std::ofstream	file;
 		 std::string name = this->getTargetName() + "_shrubbery";
@@ -74,6 +74,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 
 		}
 		file.close();
-		std::cout << this->_target << " has been executed by Bureaucrat: " << executor.getName() << "!" << std::endl;
+		std::cout << GREEN << this->_target << "_shrubbery form has been executed by Bureaucrat: " << executor.getName() << "!" << RESET << std::endl;
 }
 

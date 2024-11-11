@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 18:31:23 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:39:50 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int main(void)
 {
 	
 		std::string user;
-		std::cout << BLUE << "WELCOME TO THE MARVELOUS WORLD OF FORMS!" << std::endl << std::endl;
+		std::cout << YELLOW << "WELCOME TO THE MARVELOUS WORLD OF FORMS!" << std::endl << std::endl;
 		Bureaucrat *s = new Bureaucrat();
 		Bureaucrat *m = new Bureaucrat("Princess Peach", 50);
-		sleep(5);
+		sleep(2);
 		std::cout << RESET << "Zaphood Beeblebrox: " << GREEN << "Hello again my friend,... my memory is short and I have a lot of things on my mind.., " << std::endl <<
 			"my apologies.., could you remind me your name again? " << RESET; 
 		if (!std::getline(std::cin, user)) {
@@ -82,7 +82,7 @@ int main(void)
 			std:: cout << e.what() << std::endl; 
 		}
 		sleep(4);
-		std::cout << "Ford: " << RED_BACKGROUND << "THE VOGONS ARE HERE.. EVERYBODY LEAVE THE PLANET BEFORE IT IS TOOO LATE !!!" << RESET << std::endl;
+		std::cout << "Ford: " << RED_BACKGROUND << "THE VOGONS ARE HERE..!! EVERYBODY LEAVE THE PLANET BEFORE IT IS TOOO LATE !!!" << RESET << std::endl;
 		sleep(3);
 		std::cout << "Prostetnic Vogon Jeltz: " << BOLD << RED << "This is Prostetnic Vogon Jeltz of the Galactic Hyperspace Planning Council. " << std::endl; 
 		sleep(3);

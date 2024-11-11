@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 12:47:39 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:37:09 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > LOWEST)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << "The Bureaucrat "<<BOLD << this->_name << RESET << " has been employed with level: " << this->_grade << "!" << std::endl;  
+	std::cout << "The Bureaucrat "<<BOLD << this->_name << " has been employed with level: " << this->_grade << "!" << RESET << std::endl;  
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &cpy) {

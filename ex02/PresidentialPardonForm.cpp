@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:09:53 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 17:18:52 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:25:01 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string target) : AForm
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
-	std::cout << this->getName() << " PresidentialPardonForm has been shredded & burned" << std::endl;
+//	std::cout << this->getName() << " PresidentialPardonForm has been shredded & burned" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &cpy) {
@@ -44,6 +44,6 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const {
 	else if (!this->getIsSigned()) {
 		throw AForm::FormNotSignedException();
 	}
-	std::cout << this->_target << " has been pardoned by Zaphood Beeblebrox." << std::endl;
+	std::cout << GREEN << this->_target << " has been pardoned by Zaphood Beeblebrox." << YELLOW << std::endl << std::endl << "The PresidentialPardonForm has been executed by Bureaucrat: " << executor.getName() << RESET << std::endl << std::endl;
 }
 

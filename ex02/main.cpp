@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 18:33:19 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:32:25 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ int main(void)
 		std::cout << "Zaphood: " << GREEN << " I thought that much. " << u->getName() <<" could you give it a go?" << RESET << std::endl; 
 		 try {
 			u->executeForm(*lucky);
-		//	lucky->execute(*u);
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
@@ -87,7 +86,7 @@ int main(void)
 
 		RobotomyRequestForm *house = new RobotomyRequestForm("arthurs");
 		try {
-			m->signForm(*house);
+			u->signForm(*house);
 		}
 		catch (std::exception &e) {
 			std::cout <<e.what() << std::endl;
@@ -115,7 +114,7 @@ int main(void)
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
-		ShrubberyCreationForm *forrest = new ShrubberyCreationForm("arthur");
+		ShrubberyCreationForm *forrest = new ShrubberyCreationForm("forrest");
 		sleep(2);
 		try {
 			m->signForm(*forrest);
@@ -125,7 +124,7 @@ int main(void)
 		}
 
 		try {
-			std::cout << u->getName() << " has signed the execution of the ShrubberyCreationForm" << std::endl;
+			std::cout << u->getName() << " has signed the execution of the ShrubberyCreationForm!" << std::endl;
 			//u->executeForm(*arthur);
 			forrest->execute(*u);
 		}
