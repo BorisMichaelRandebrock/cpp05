@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 11:32:25 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:55:44 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,22 +84,22 @@ int main(void)
 
 		std::cout << "Zaphood: " << GREEN << "Ok Folks., we have our first order in.. please " << u->getName() << " sign and execute the request!" << RESET << std::endl; 
 
-		RobotomyRequestForm *house = new RobotomyRequestForm("arthurs");
+		RobotomyRequestForm *dent = new RobotomyRequestForm("arthurs");
 		try {
-			u->signForm(*house);
+			u->signForm(*dent);
 		}
 		catch (std::exception &e) {
 			std::cout <<e.what() << std::endl;
 		}
 		try {
-			u->executeForm(*house);
+			u->executeForm(*dent);
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 		sleep(2);
-		std::cout << "Zaphood: " << YELLOW  << "STOP, STOP... I JUST REALIZED, THIS IS THE HOUSE OF ARTHUR DENT, BELOVED FRIEND OF FORD!!! " << RESET << std::endl; 
-		std::cout << YELLOW  << "I will write a PresidentialPardon and create some green area around his property inmediately! Please do everything you can to get this done ASAP " << RESET << std::endl; 
+		std::cout << "Zaphood: " << YELLOW  << "STOP, STOP... I JUST REALIZED, THIS IS ARTHUR DENT, BELOVED FRIEND OF FORD!!! " << RESET << std::endl; 
+		std::cout << YELLOW  << "I will write a PresidentialPardon and create some green area around his property inmediately! Please do everything you can to get this done ASAP!!! " << RESET << std::endl; 
 		PresidentialPardonForm *arthur = new PresidentialPardonForm("Arthur Dent");
  		sleep(2); 
 		try {
@@ -135,7 +135,7 @@ int main(void)
 	
 		delete forrest;
 		delete arthur;
-		delete house;
+		delete dent;
 		delete lucky;
 		delete u;
 		delete s;

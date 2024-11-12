@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 14:05:06 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:59:46 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main(void)
 
 		std::cout << "Bureaucrat " << a->getName() << " has now grade: " << a->getGrade() << std::endl;
 		sleep(2);
-		std::cout << "The new Bureaucrat is very, very useless, even for bureaucratic standards.. " << std::endl;
+		std::cout << "The new Bureaucrat is very, very useless, even for Vogsphere's standards.. " << std::endl;
 		try {
 			a->decrementGrade();
 		} 

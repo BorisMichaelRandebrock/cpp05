@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 11:39:50 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:50:58 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ int main(void)
 			std:: cout << e.what() << std::endl; 
 		}
 		sleep(4);
-		std::cout << "Ford: " << RED_BACKGROUND << "THE VOGONS ARE HERE..!! EVERYBODY LEAVE THE PLANET BEFORE IT IS TOOO LATE !!!" << RESET << std::endl;
+		
+		std::cout << std::endl << "Ford: " << RED_BACKGROUND << "THE VOGONS ARE HERE..!! EVERYBODY LEAVE THE PLANET BEFORE IT IS TOOO LATE !!!" << RESET << std::endl << std::endl;
 		sleep(3);
 		std::cout << "Prostetnic Vogon Jeltz: " << BOLD << RED << "This is Prostetnic Vogon Jeltz of the Galactic Hyperspace Planning Council. " << std::endl; 
 		sleep(3);
