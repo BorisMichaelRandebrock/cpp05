@@ -6,13 +6,14 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 16:50:58 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:10:39 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include <unistd.h>
+#include <cstdlib>
 
 int main(void)
 {
@@ -85,6 +86,13 @@ int main(void)
 		
 		std::cout << std::endl << "Ford: " << RED_BACKGROUND << "THE VOGONS ARE HERE..!! EVERYBODY LEAVE THE PLANET BEFORE IT IS TOOO LATE !!!" << RESET << std::endl << std::endl;
 		sleep(3);
+		#ifdef __APPLE__
+        system("open ../ex01/prostetnic.png");
+    #elif __linux__
+        system("xdg-open ../ex01/prostetnic.png");
+    #elif _WIN32
+        system("start ..\ex01\\prostetnic.png");
+    #endif
 		std::cout << "Prostetnic Vogon Jeltz: " << BOLD << RED << "This is Prostetnic Vogon Jeltz of the Galactic Hyperspace Planning Council. " << std::endl; 
 		sleep(3);
 		std::cout << "As you will no doubt be aware, the plans for development of the outlying regions of the Galaxy require the building of a hyperspatial express route through your star system, and regrettably your planet is one of those scheduled for demolition." << std::endl;

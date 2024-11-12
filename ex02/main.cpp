@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 16:55:44 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:13:07 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,13 @@ int main(void)
 			std::cout << "ShrubberyCreationForm could not be executed!" << std::endl;
 			std::cout << e.what() << std::endl;
 		}
+		#ifdef __APPLE__
+        system("open ../ex02/forrest_shrubbery");
+    #elif __linux__
+        system("xdg-open ../ex02/forrest_shrubbery");
+    #elif _WIN32
+        system("start ..\ex02\\forrest_shrubbery");
+    #endif
 	
 		delete forrest;
 		delete arthur;

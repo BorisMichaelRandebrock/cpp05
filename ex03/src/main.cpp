@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 17:24:30 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:26:29 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main(void)
 	sleep(2);
 	forms[1] = intern.makeForm("robotomy request", "Marvin the Paranoid Android");
 	sleep(2);
-	forms[2] = intern.makeForm("shrubbery request", "Vogon Poetry Department");
+	forms[2] = intern.makeForm("shrubbery request", "VogonPoetryDepartment");
 	sleep(2);
 
 	try {
@@ -91,7 +91,14 @@ int main(void)
 	} catch (const std::exception& e) {
 		std::cerr << "Mission error: " << e.what() << std::endl;
 	}
-
+		#ifdef __APPLE__
+        system("open ../ex03/VogonPoetryDepartment_shrubbery");
+    #elif __linux__
+        system("xdg-open ../ex03/VogonPoetryDepartment_shrubbery");
+    #elif _WIN32
+        system("start ..\ex03\\VogonPoetryDepartment_shrubbery");
+    #endif
+	
 	if (missionType == 0) {
 		std::cout << std::endl << "The intern reflects, wondering if future assignments might be less... apocalyptic." << std::endl;
 	} else {
