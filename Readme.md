@@ -1,14 +1,17 @@
 # C++ - Module 05: Repetition and Exceptions
 
 ### A Dive into Bureaucracy, Forms, and Planetary Relocation
-
+<!-- ![prostetnic](https://github.com/user-attachments/assets/acda80b3-2b18-41e7-a510-c7d2c7ca472b)-->
 Welcome to the world of **C++ Module 05**! This project explores the dizzying landscape of forms, bureaucrats, and interns, all thriving in a world where exceptions are inevitable, much like the paperwork in a bureaucratic universe. As part of this project, I implemented the essential exercises from Module 05, adding in my own creation— the **PlanetaryRelocationForm**—which provides a touch of interstellar drama and dark humor inspired by *The Hitchhiker's Guide to the Galaxy*.
+
 
 ---
 
 ### Project Breakdown
 
 #### Exercise 00: "Mommy, when I grow up, I want to be a bureaucrat!"
+<img src="https://github.com/user-attachments/assets/acda80b3-2b18-41e7-a510-c7d2c7ca472b" alt="Vogon Prostetnic Jeltz" align="left">
+
 The journey begins with the **Bureaucrat** class, encapsulating the essence of rigid hierarchy. Bureaucrats have names that don't change and grades that strictly dictate their rank. They wield the power to raise or lower their grade—but only within the acceptable bounds, lest they provoke a *GradeTooHighException* or *GradeTooLowException*. In this artificial nightmare of offices and hierarchy, it’s crucial to have strict error handling, ensuring that any attempt to step out of bounds is met with a predictable response. 
 
 #### Exercise 01: "Form up, maggots!"
