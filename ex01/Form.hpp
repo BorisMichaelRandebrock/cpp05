@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/06 17:31:45 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:11:27 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ class Bureaucrat;
 
 class Form {
 	private:
-		std::string	_name;
-		bool 		_isSigned;
-		int 		_gradeSign;
-		int			_gradeExecute;
+		const		std::string	_name;
+		bool 			_isSigned;
+		const int _gradeSign;
+		const int	_gradeExecute;
 
 	public:
 		Form();

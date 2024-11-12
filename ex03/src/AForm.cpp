@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 11:11:42 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:57:52 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,12 @@ AForm::AForm(const std::string name, const int gradeSign, const int gradeExecute
 	std::cout << "The Form "<< BOLD << this->_name << RESET << " has been created with required signature level of: " << this->_gradeSign << " and required execution level of: " << this->_gradeExecute << std::endl;  
 }
 
-AForm::AForm(const AForm &cpy) {
-	*this = cpy;
+AForm::AForm(const AForm &cpy) : _name(cpy._name), _isSigned(cpy._isSigned), _gradeSign(cpy._gradeSign), _gradeExecute(cpy._gradeExecute) {
+	//*this = cpy;
 }
 
 AForm &AForm::operator=(const AForm &cpy) {
-	this->_name = cpy._name;
 	this->_isSigned = cpy._isSigned;
-	this->_gradeSign = cpy._gradeSign;
-	this->_gradeExecute = cpy._gradeExecute;
 	return *this;
 }
 

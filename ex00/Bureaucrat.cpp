@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/06 11:03:53 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:02:28 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &cpy) {
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy) {
-	this->_name = cpy._name;
+	//this->_name = cpy._name; as this->_name is a const, it can not be copied
 	this->_grade = cpy._grade;
 	return *this;
 }

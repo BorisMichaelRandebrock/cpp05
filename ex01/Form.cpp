@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/07 18:33:39 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:36:10 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ Form::Form() : _name("Basic Form"), _isSigned(false), _gradeSign(LOWEST), _grade
 	std::cout << "Default constuctor has created a new form with minimum requiremenst for signature & execution." << std::endl;
 }
 
+
 Form::Form(const std::string name, const int gradeSign, const int gradeExecute) : _name(name), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
 	this->_isSigned = false;
 	if (gradeSign < HIGHEST || gradeSign > LOWEST)
@@ -24,16 +25,16 @@ Form::Form(const std::string name, const int gradeSign, const int gradeExecute) 
 		throw Form::GradeTooLowException();
 	std::cout << "The Form "<< BOLD << this->_name << RESET << " has been created with required signature level of: " << this->_gradeSign << " and required execution level of: " << this->_gradeExecute << std::endl;  
 }
-
+/*
 Form::Form(const Form &cpy) {
-	*this = cpy;
+	*this = cpy; this can not be here as _nam, _gradeSign and _gradeExecute are const
+}*/
+Form::Form(const Form &cpy) : _name(cpy._name), _isSigned(cpy._isSigned), _gradeSign(cpy._gradeSign), _gradeExecute(cpy._gradeExecute) {
+    // Correction: initialize _name, _gradeSign, and _gradeExecute in initializer list
 }
 
 Form &Form::operator=(const Form &cpy) {
-	this->_name = cpy._name;
 	this->_isSigned = cpy._isSigned;
-	this->_gradeSign = cpy._gradeSign;
-	this->_gradeExecute = cpy._gradeExecute;
 	return *this;
 }
 

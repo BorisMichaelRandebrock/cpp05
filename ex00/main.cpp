@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 17:09:39 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:05:06 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,17 @@ int main(void)
 		std::cout << std::endl;
 		std::cout << "What about if I make you head of the construction division?? " << RESET << std::endl;
 		sleep(2);
+		try
+		{
+			Bureaucrat *u = new Bureaucrat(user, -1);
+			(void)u;
+			sleep(1);
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << "Zaphood: " << YELLOW << "my apologies.. he highest level is 1 " << std::endl;				
+		}
+		
 		Bureaucrat *u = new Bureaucrat(user, 1);
 		std::cout << u->getName() << " is now employed with grade: " << u->getGrade() << std::endl;
 		sleep(2);

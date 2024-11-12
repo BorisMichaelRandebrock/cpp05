@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
+#    By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 13:03:51 by brandebr          #+#    #+#              #
-#    Updated: 2024/11/08 17:48:02 by brandebr         ###   ########.fr        #
+#    Updated: 2024/11/12 15:54:25 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ clean:
 fclean: clean
 	/bin/rm -rf $(OBJ_DIR)
 	/bin/rm -f $(NAME)
+	/bin/rm -f *_shrubbery
 	
 re: fclean all
 

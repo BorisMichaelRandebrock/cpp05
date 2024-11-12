@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:51 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/08 12:33:13 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:39:57 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class Bureaucrat;
 
 class AForm {
 	private:
-		std::string	_name;
+		const std::string	_name;
 		bool 		_isSigned;
-		int 		_gradeSign;
-		int			_gradeExecute;
+		const int	_gradeSign;
+		const int	_gradeExecute;
 
 	public:
 		AForm();

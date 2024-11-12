@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 11:37:09 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:09:51 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat &cpy) {
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy) {
-	this->_name = cpy._name;
 	this->_grade = cpy._grade;
 	return *this;
 }
