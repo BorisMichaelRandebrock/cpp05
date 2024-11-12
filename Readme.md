@@ -18,6 +18,8 @@ The journey begins with the **Bureaucrat** class, encapsulating the essence of r
 Enter the **Form** class, crafted to keep bureaucrats in perpetual motion. Each form demands a minimum grade to sign and execute, effectively delegating control to only those bureaucrats capable of fulfilling their paper-pushing destiny. Forms can be signed by bureaucrats whose grades are sufficiently high, and a failed attempt raises a clear, specific exception. From managing signatures to providing the bureaucrats a reason to exist, this exercise refines exception handling and solidifies our bureaucratic world.
 
 #### Exercise 02: "No, you need form 28B, not 28C..."
+<!-- ![main_characters](https://github.com/user-attachments/assets/c057a1c9-db5f-4bea-ac17-38c0702ce632) -->
+<img src="https://github.com/user-attachments/assets/c057a1c9-db5f-4bea-ac17-38c0702ce632" alt="main Characters form the hitchhikesr guide to the galaxy" align="right" width="242" height="370">
 Now equipped with specific **AForm** subclasses, we shift to tasks that actually *do* something:
 - **ShrubberyCreationForm**: Plants ASCII trees in a file, bringing a digital forest to life.
 - **RobotomyRequestForm**: Attempts a 50% successful robotic transformation of a target, bringing random chaos into the equation.
