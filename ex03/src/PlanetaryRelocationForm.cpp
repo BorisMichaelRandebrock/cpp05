@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PlanetaryRelocationForm.cpp                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:48:02 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/11 12:52:56 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:26:39 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void PlanetaryRelocationForm::execute(Bureaucrat const &executor) const {
         std::cout << RED << "ERROR: Beam misalignment! Planet " << _target << " relocation has failed." << RESET << std::endl;
         sleep(1);
         std::cout << RED << "Intergalactic Transport Services reports: 'Error 42 - Please resubmit request after recalibration.'" << RESET << std::endl;
+        sleep(1);
+        std::cout << RED_BACKGROUND << "Due too a lack of time, resubmit after recalibration is useless and Earth's destruction can not be prevented!" << RESET << std::endl;
     }
 }
 

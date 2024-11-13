@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:39:57 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:11:55 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void AForm::beSigned(Bureaucrat const &name) {
 	if (this->_isSigned == true)
 		std::cout << YELLOW << "You are too slow..., this form has already been signed." << RESET << std::endl;
 	else if (this->_gradeSign < name.getGrade()) {
-		std::cout << RED << name.getName() << " couldn’t sign " << this->getName() << " because : " << RESET;
+		std::cout << RED << name.getName() << " could not sign " << this->getName() << " because : " << RESET;
 		throw GradeTooLowException();
 	}
 	else {

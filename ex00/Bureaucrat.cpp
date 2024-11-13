@@ -6,14 +6,14 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 14:02:28 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:20:51 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Default"), _grade(LOWEST) {
-	std::cout << "A new office clerk has been employd at the lowest grade with default clerk constructor and with " << this->_grade << " grade." << std::endl;
+Bureaucrat::Bureaucrat() : _name("Mr. Prosser"), _grade(LOWEST) {
+	std::cout << this->_name << " has been employed at the lowest grade with default clerk constructor and grade: " << this->_grade << "." << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade) {

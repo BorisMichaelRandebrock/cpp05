@@ -6,14 +6,14 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:36:10 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:03:18 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
 Form::Form() : _name("Basic Form"), _isSigned(false), _gradeSign(LOWEST), _gradeExecute(LOWEST) {
-	std::cout << "Default constuctor has created a new form with minimum requiremenst for signature & execution." << std::endl;
+	std::cout << "Default constuctor has created a new form with minimum requirements for signature & execution." << std::endl;
 }
 
 
@@ -52,12 +52,12 @@ void Form::beSigned(Bureaucrat const &name) {
 	if (this->_isSigned == true)
 		std::cout << YELLOW << "You are too slow..., this form has already been signed." << RESET << std::endl;
 	else if (this->_gradeSign < name.getGrade()) {
-		std::cout << RED << name.getName() << " couldn’t sign " << this->getName() << " because : " << RESET;
+		std::cout << RED << name.getName() << " could not sign " << this->getName() << " because : " << RESET;
 		throw GradeTooLowException();
 	}
 	else {
 		this->_isSigned = true;
-		std::cout << "The Bureaucrat " << name.getName() << " signed " << this->_name << " Formular." <<std::endl; 
+		std::cout << "The Bureaucrat " << name.getName() << " signed " << this->_name << "." <<std::endl; 
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 18:10:39 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:03:18 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(void)
 		}
 		Bureaucrat *u = new Bureaucrat(user, 1);
 		
-		std::cout << "Zaphood: " << GREEN << "For starters. lets create a simple, basic form." << RESET << std::endl; 
+		std::cout << "Zaphood: " << GREEN << "For starters, let's create a simple, basic form." << RESET << std::endl; 
 		sleep(2);
 		Form *basic = new Form();
 		
@@ -44,7 +44,7 @@ int main(void)
 			std::cout << e.what() << std::endl;
 		}
 		sleep(2);
-		std::cout << "Zaphood: " << GREEN << "Let's see whether I can introduce you to your first task, lets create a Form together..." << RESET << std::endl; 
+		std::cout << "Zaphood: " << GREEN << "Let's see whether I can introduce you to your first task, let's create a Form together..." << RESET << std::endl; 
 		sleep(2);
 		sleep(2);
 		std::cout << "Zaphood: " << GREEN << u->getName() << ", I have here a request for the destrucion of that shabby little house in Country Lane, with that, I will show you how we handle this kinda things." << RESET << std::endl;
@@ -73,7 +73,7 @@ int main(void)
 			std::cout << RED << "This should work " << m->getName() <<
 				" failed: " << e.what() << BLUE << std::endl;
 		}
-		std::cout << "Zaphood: " << GREEN << " Just for showing you what happens if a form is already signed, " << u->getName() << ", please try to sign the form which has been just signed by " << m->getName() << "." << std::endl; 
+		std::cout << "Zaphood: " << GREEN << " Just to show you what happens if a form is already signed, " << u->getName() << ", please try to sign the form which has been just signed by " << m->getName() << "." << std::endl; 
 		sleep(2);
 		try { 
 			u->signForm(*destroyArthurDentsHome);

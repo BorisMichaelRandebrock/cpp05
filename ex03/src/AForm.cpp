@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:30:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:57:52 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:23:43 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void AForm::beSigned(Bureaucrat const &name) {
 	}
 	else {
 		this->_isSigned = true;
-		std::cout << "The Bureaucrat " << name.getName() << " signed the " << this->_name << " Form." <<std::endl; 
+		std::cout << "The Bureaucrat " << name.getName() << " signed the " << this->_name << "." <<std::endl; 
 	}
 }
 
