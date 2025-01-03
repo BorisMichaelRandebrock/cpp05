@@ -10,7 +10,8 @@ Welcome to the world of **C++ Module 05**! This project explores the dizzying la
 ### Project Breakdown
 
 #### Exercise 00: "Mommy, when I grow up, I want to be a bureaucrat!"
-<img src="https://github.com/user-attachments/assets/acda80b3-2b18-41e7-a510-c7d2c7ca472b" alt="Vogon Prostetnic Jeltz" align="left">
+<img src="https://github.com/user-attachments/assets/be99b31e-d3dd-4f85-8563-4c4493925057" alt="Vogon Prostetnic Jeltz" align="left" width="242" height="370">
+<!-- ![IMG_1178](https://github.com/user-attachments/assets/be99b31e-d3dd-4f85-8563-4c4493925057) -->
 
 The journey begins with the **Bureaucrat** class, encapsulating the essence of rigid hierarchy. Bureaucrats have names that don't change and grades that strictly dictate their rank. They wield the power to raise or lower their grade—but only within the acceptable bounds, lest they provoke a *GradeTooHighException* or *GradeTooLowException*. In this artificial nightmare of offices and hierarchy, it’s crucial to have strict error handling, ensuring that any attempt to step out of bounds is met with a predictable response. 
 
@@ -19,7 +20,9 @@ Enter the **Form** class, crafted to keep bureaucrats in perpetual motion. Each 
 
 #### Exercise 02: "No, you need form 28B, not 28C..."
 <!-- ![main_characters](https://github.com/user-attachments/assets/c057a1c9-db5f-4bea-ac17-38c0702ce632) -->
-<img src="https://github.com/user-attachments/assets/c057a1c9-db5f-4bea-ac17-38c0702ce632" alt="main Characters form the hitchhikesr guide to the galaxy" align="right" width="242" height="370">
+<img src="https://github.com/user-attachments/assets/c1c4e2b1-c486-49d7-a810-91bb87f2e8bf" alt="main Characters form the hitchhikesr guide to the galaxy" align="right" width="242" height="370">
+<!-- ![IMG_1181](https://github.com/user-attachments/assets/c1c4e2b1-c486-49d7-a810-91bb87f2e8bf) -->
+
 Now equipped with specific **AForm** subclasses, we shift to tasks that actually *do* something:
 - **ShrubberyCreationForm**: Plants ASCII trees in a file, bringing a digital forest to life.
 - **RobotomyRequestForm**: Attempts a 50% successful robotic transformation of a target, bringing random chaos into the equation.
