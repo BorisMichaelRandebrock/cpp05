@@ -2,7 +2,7 @@
 
 ### A Dive into Bureaucracy, Forms, and Planetary Relocation
 <!-- ![prostetnic](https://github.com/user-attachments/assets/acda80b3-2b18-41e7-a510-c7d2c7ca472b)-->
-Welcome to the world of **C++ Module 05**! This project explores the dizzying landscape of forms, bureaucrats, and interns, all thriving in a world where exceptions are inevitable, much like the paperwork in a bureaucratic universe. As part of this project, I implemented the essential exercises from Module 05, adding in my own creation— the **PlanetaryRelocationForm**—which provides a touch of interstellar drama and dark humor inspired by *The Hitchhiker's Guide to the Galaxy*.
+Welcome to the world of **C++ Module 05**! This project explores the dizzying landscape of forms, bureaucrats, and interns, all thriving in a world where exceptions are inevitable, much like the paperwork in a bureaucratic universe. As part of this project, I implemented the essential exercises from Module 05, adding in my own creation— the **PlanetaryRelocationForm**—which provides a touch of interstellar drama and dark humor inspired by *The Hitchhiker's Guide to the Galaxy*. 
 
 
 ---
