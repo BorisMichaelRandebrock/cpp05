@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:40:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/11/13 11:56:17 by brandebr         ###   ########.fr       */
+/*   Updated: 2025/01/07 10:56:02 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ int main(void)
 		std::cout << GREEN << "Well, as you know, once you are working in the administration, you can always help us employing people you trust,.. " <<
 			std::endl << "...is your spouse currently employed? How do you call your life-partner? " << RESET << std::endl;
 		std::string couple;
+
 		if (!std::getline(std::cin, couple)) {
 			std::cout << std::endl << "Zaphood Beeblebrox: " << RED << "Don't screw with me...! You want the job, or not?" << std::endl;
 			return 0;
